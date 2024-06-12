@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Signup</title>
+        <style>
+            body{
+                text-align: center;
+                align-items:center;
+                justify-content: center;
+                display: flex;
+            }
+        .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-grp{
+    margin: 15px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form action="/signup" method="post">
+                <div class="form-grp">
+                    <lable for = 'name'>Name: </lable>
+                    <input type="text" id="name" placeholder="Name" name="name" required>
+                </div>
+                <div class="form-grp">
+                    <label for="password">Password: </label>
+                    <input type="password" id="password" placeholder="Password" name="password" required>
+                </div>
+                <button type="submit" onclick="function1()">Signup</button>
+                
+            </form>
+        </div>
+        <script>
+            function function1(){
+                const name = document.getElementById("name").value;
+                const pass = document.getElementById("password").value;
+                if(name === "" || pass === "")
+                {
+                    alert('Please fill the details');
+                }
+                else{
+                    window.location='info.html';
+                }
+            }
+        </script>
+        
+    </body>
+</html>
